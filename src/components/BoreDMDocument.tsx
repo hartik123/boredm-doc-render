@@ -42,12 +42,12 @@ const styles = StyleSheet.create({
   },
   logoStripes: {
     flexDirection: 'row',
-    marginBottom: 3,
+    marginBottom: 4,
     gap: 2,
   },
   stripe: {
     width: 4,
-    height: 20,
+    height: 16,
     backgroundColor: '#000',
     transform: 'skewX(-20deg)',
   },
@@ -99,30 +99,19 @@ const styles = StyleSheet.create({
   },
   value: {
     fontFamily: 'Helvetica',
-    marginLeft: 8,
+    marginLeft: 4,
   },
   waterLabel: {
     fontFamily: 'Helvetica',
-    marginLeft: 2,
+    marginLeft: 8,
   },
-  waterSymbol: {
+  checkMark: {
     fontSize: 12,
     fontFamily: 'Helvetica-Bold',
-    marginRight: 4,
   },
   remarksCell: {
     width: '33.33%',
     padding: 6,
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    bottom: 0,
-    borderLeft: 2,
-    borderColor: '#000',
-  },
-  remarksContainer: {
-    width: '33.33%',
-    position: 'relative',
   },
   remarksLabel: {
     fontFamily: 'Helvetica',
@@ -161,78 +150,74 @@ const BoreDMDocument = () => {
           </View>
         </View>
 
-        {/* Data Rows Container with Remarks */}
-        <View style={{position: 'relative'}}>
-          {/* Row 1 */}
-          <View style={styles.tableRow}>
-            <View style={{...styles.cell, ...styles.cellBorderRight, width: '33.33%'}}>
-              <Text style={styles.label}>Drilling Firm:</Text>
-              <Text style={styles.value}>BoreDM Drilling</Text>
-            </View>
-            <View style={{...styles.cell, ...styles.cellBorderRight, width: '33.33%'}}>
-              <Text style={styles.label}>Project No.:</Text>
-              <Text style={styles.value}>25-3332</Text>
-            </View>
-            <View style={{width: '33.33%'}} />
+        {/* Row 1 */}
+        <View style={styles.tableRow}>
+          <View style={{...styles.cell, ...styles.cellBorderRightBold, width: '33.33%'}}>
+            <Text style={styles.label}>Drilling Firm:</Text>
+            <Text style={styles.value}>BoreDM Drilling</Text>
           </View>
-
-          {/* Row 2 */}
-          <View style={styles.tableRow}>
-            <View style={{...styles.cell, ...styles.cellBorderRight, width: '33.33%'}}>
-              <Text style={styles.label}>Driller:</Text>
-              <Text style={styles.value}>PA</Text>
-            </View>
-            <View style={{...styles.cell, ...styles.cellBorderRight, width: '33.33%'}}>
-              <Text style={styles.label}>Date Drilled:</Text>
-              <Text style={styles.value}>03/05/2025</Text>
-            </View>
-            <View style={{width: '33.33%'}} />
+          <View style={{...styles.cell, ...styles.cellBorderRightBold, width: '33.33%'}}>
+            <Text style={styles.label}>Project No.:</Text>
+            <Text style={styles.value}>25-3332</Text>
           </View>
-
-          {/* Row 3 */}
-          <View style={styles.tableRow}>
-            <View style={{...styles.cell, ...styles.cellBorderRight, width: '33.33%'}}>
-              <Text style={styles.label}>Logged By:</Text>
-              <Text style={styles.value}>LA</Text>
-            </View>
-            <View style={{...styles.cell, ...styles.cellBorderRight, width: '33.33%'}}>
-              <Text style={styles.label}>Boring Depth:</Text>
-              <Text style={styles.value}>-</Text>
-            </View>
-            <View style={{width: '33.33%'}} />
-          </View>
-
-          {/* Row 4 */}
-          <View style={styles.tableRow}>
-            <View style={{...styles.cell, ...styles.cellBorderRight, width: '33.33%'}}>
-              <Text style={styles.waterSymbol}>▽</Text>
-              <Text style={styles.waterLabel}>Water :</Text>
-              <Text style={styles.value}>N/A</Text>
-            </View>
-            <View style={{...styles.cell, ...styles.cellBorderRight, width: '33.33%'}}>
-              <Text style={styles.label}>Boring Elevation:</Text>
-              <Text style={styles.value}>N/A</Text>
-            </View>
-            <View style={{width: '33.33%'}} />
-          </View>
-
-          {/* Row 5 - Last Row */}
-          <View style={styles.tableRowLast}>
-            <View style={{...styles.cell, ...styles.cellBorderRight, width: '33.33%'}}>
-              <Text style={styles.label}>Hammer Type:</Text>
-              <Text style={styles.value}>-</Text>
-            </View>
-            <View style={{...styles.cell, ...styles.cellBorderRight, width: '33.33%'}}>
-              <Text style={styles.label}>Brand Address:</Text>
-              <Text style={styles.value}>4909 N. 44th St, Phoenix, AZ 85018</Text>
-            </View>
-            <View style={{width: '33.33%'}} />
-          </View>
-
-          {/* Remarks Column - Spans all rows */}
-          <View style={styles.remarksCell}>
+          <View style={{...styles.remarksCell}}>
             <Text style={styles.remarksLabel}>Remarks:</Text>
             <Text style={styles.hyphen}>-</Text>
+          </View>
+        </View>
+
+        {/* Row 2 */}
+        <View style={styles.tableRow}>
+          <View style={{...styles.cell, ...styles.cellBorderRightBold, width: '33.33%'}}>
+            <Text style={styles.label}>Driller:</Text>
+            <Text style={styles.value}>PA</Text>
+          </View>
+          <View style={{...styles.cell, ...styles.cellBorderRightBold, width: '33.33%'}}>
+            <Text style={styles.label}>Date Drilled:</Text>
+            <Text style={styles.value}>03/05/2025</Text>
+          </View>
+          <View style={{...styles.remarksCell}}>
+          </View>
+        </View>
+
+        {/* Row 3 */}
+        <View style={styles.tableRow}>
+          <View style={{...styles.cell, ...styles.cellBorderRightBold, width: '33.33%'}}>
+            <Text style={styles.label}>Logged By:</Text>
+            <Text style={styles.value}>LA</Text>
+          </View>
+          <View style={{...styles.cell, ...styles.cellBorderRightBold, width: '33.33%'}}>
+            <Text style={styles.label}>Boring Depth:</Text>
+            <Text style={styles.value}>-</Text>
+          </View>
+          <View style={{...styles.remarksCell}}>
+          </View>
+        </View>
+
+        {/* Row 4 */}
+        <View style={styles.tableRow}>
+          <View style={{...styles.cell, ...styles.cellBorderRightBold, width: '33.33%'}}>
+            <Text style={styles.checkMark}>▽</Text>
+            <Text style={styles.waterLabel}>Water :</Text>
+            <Text style={styles.value}>N/A</Text>
+          </View>
+          <View style={{...styles.cell, ...styles.cellBorderRightBold, width: '33.33%'}}>
+            <Text style={styles.label}>Boring Elevation:</Text>
+            <Text style={styles.value}>N/A</Text>
+          </View>
+          <View style={{...styles.remarksCell}}>
+          </View>
+        </View>
+
+        {/* Row 5 - Last Row */}
+        <View style={styles.tableRowLast}>
+          <View style={{...styles.cell, ...styles.cellBorderRightBold, width: '33.33%'}}>
+            <Text style={styles.label}>Hammer Type:</Text>
+            <Text style={styles.value}>-</Text>
+          </View>
+          <View style={{...styles.cell, width: '66.66%'}}>
+            <Text style={styles.label}>Brand Address:</Text>
+            <Text style={styles.value}>4909 N. 44th St, Phoenix, AZ 85018</Text>
           </View>
         </View>
       </Page>
