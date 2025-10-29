@@ -42,14 +42,14 @@ const styles = StyleSheet.create({
   },
   logoStripes: {
     flexDirection: 'row',
-    marginBottom: 4,
-    gap: 2,
+    marginBottom: 2,
+    gap: 1.5,
   },
   stripe: {
-    width: 4,
-    height: 16,
+    width: 3.5,
+    height: 18,
     backgroundColor: '#000',
-    transform: 'skewX(-20deg)',
+    transform: 'skewX(-15deg)',
   },
   mainTitle: {
     fontSize: 14,
@@ -103,11 +103,12 @@ const styles = StyleSheet.create({
   },
   waterLabel: {
     fontFamily: 'Helvetica',
-    marginLeft: 8,
+    marginLeft: 4,
   },
-  checkMark: {
-    fontSize: 12,
+  waterSymbol: {
+    fontSize: 14,
     fontFamily: 'Helvetica-Bold',
+    marginRight: 2,
   },
   remarksCell: {
     width: '33.33%',
@@ -197,7 +198,7 @@ const BoreDMDocument = () => {
         {/* Row 4 */}
         <View style={styles.tableRow}>
           <View style={{...styles.cell, ...styles.cellBorderRightBold, width: '33.33%'}}>
-            <Text style={styles.checkMark}>▽</Text>
+            <Text style={styles.waterSymbol}>▽</Text>
             <Text style={styles.waterLabel}>Water :</Text>
             <Text style={styles.value}>N/A</Text>
           </View>
