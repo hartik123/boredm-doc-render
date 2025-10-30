@@ -171,9 +171,7 @@ const BoreDMDocument = () => {
           </View>
         </View>
 
-        {/* Rows 1-4 with Remarks column */}
         <View style={{flexDirection: 'row', borderLeft: 1, borderRight: 1, borderBottom: 1, borderColor: '#000'}}>
-          {/* Left side - rows 1-4 */}
           <View style={{width: '66.66%', borderRight: 1, borderColor: '#000'}}>
             {/* Row 1 */}
             <View style={{flexDirection: 'row', borderBottom: 1, borderColor: '#000'}}>
